@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 
 import axios from "axios";
 
+import Image from "./Image";
 
  
 
@@ -29,17 +30,18 @@ useEffect(() => {
 
     <h1>{spaceImage.title}</h1>
     <div> {spaceImage.date}</div>
-    <p> {spaceImage.explanation}></p> 
-    <img className="Moon-image" src={spaceImage.hdurl} alt="Moon and saturn"/>
+    <p> {spaceImage.explanation}</p> 
     <div> {spaceImage.media_type}</div> 
     <div> {spaceImage.service_version}</div> 
+
+    {/* <img className="Moon-image" alt="Moon and saturn" src={spaceImage.hdurl} />   */}
+    <Image 
+    test = {spaceImage}/> 
     
     
-   
     
 
 
     </div>
   );
 }
- {/* <div className="body" key={props.id}></div> */}
