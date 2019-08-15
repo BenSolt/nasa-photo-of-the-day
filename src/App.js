@@ -3,13 +3,15 @@ import "./App.scss";
 
 import Body from "./components/Body";
 
-
-
 import styled from "styled-components";
 
-const Background = styled.div`
-background: blue;
-`
+// Custom Image
+const Background = styled.img`
+width: 200px;
+height: 200px;
+
+`;
+
 
 
 
@@ -26,36 +28,27 @@ const Button = styled.button`
 
 
 
-
-
-
-
-
-
 function App() {
   return (
     <div className="App">
-      
-      <Background>
 
+      {/*Dispaly Custom Image  */}
+      
       
       <Body/> 
 
-      
+    <Background src="./spaces_stars.jpg"/>
+
     <Button>Normal</Button>
     <Button primary>Primary</Button>
  
-    
-
-   
-
-
-
       <p>
         {/* Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! */}
       </p>
-      </Background>
+
+     
+
     </div>
   );
 }
