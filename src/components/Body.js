@@ -5,10 +5,14 @@ import axios from "axios";
 import Image from "./Image";
 
  
-
+import { Card } from "semantic-ui-react";
 
 export default function  Body() {
     const [spaceImage, setSpaceImage] = useState([]);
+
+
+
+
 
 
 // use Effect
@@ -28,9 +32,9 @@ useEffect(() => {
   return (
     <div className="container">
 
-    <h1>{spaceImage.title}</h1>
-    <div> {spaceImage.date}</div>
-    <p> {spaceImage.explanation}</p> 
+    {/* <h1>{spaceImage.title}</h1> */}
+    {/* <div> {spaceImage.date}</div> */}
+    {/* <p> {spaceImage.explanation}</p>  */}
     <div> {spaceImage.media_type}</div> 
     <div> {spaceImage.service_version}</div> 
 
@@ -38,6 +42,29 @@ useEffect(() => {
     <Image 
     test = {spaceImage}/> 
     
+    
+  
+  <Card>
+    {/* <Image src='/images/avatar/large/matthew.png' wrapped ui={false} /> */}
+    <Card.Content>
+    <h1>{spaceImage.title}</h1>
+
+    <div> {spaceImage.date}</div>
+      {/* <Card.Header>Matthew</Card.Header> */}
+     
+      
+      <p> {spaceImage.explanation}</p> 
+      
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        {/* <Icon name='user' /> */}
+        22 Friends
+      </a>
+    </Card.Content>
+  </Card>
+)
+
     
     
 
